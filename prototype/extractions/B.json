@@ -1,0 +1,67 @@
+{
+  "proposal_id": "B",
+  "fields": {
+    "licence_held_by_bidder": {
+      "value": false,
+      "status": "found",
+      "note": "electrical work is subcontracted; subcontractor to be confirmed after award"
+    },
+    "wsib_clearance_confirmed": {
+      "value": true,
+      "status": "found"
+    },
+    "liability_insurance_cad": {
+      "value": 5000000,
+      "status": "found"
+    },
+    "qualifying_installs_count": {
+      "value": 6,
+      "status": "found"
+    },
+    "installs_period_start_year": {
+      "value": null,
+      "status": "not_stated"
+    },
+    "installs_period_years_back": {
+      "value": 4,
+      "status": "found"
+    },
+    "total_price_cad": {
+      "value": 189500,
+      "status": "found"
+    },
+    "completion_weeks": {
+      "value": 10,
+      "status": "found"
+    },
+    "panel_warranty_years": {
+      "value": 25,
+      "status": "found"
+    },
+    "workmanship_warranty_years": {
+      "value": 5,
+      "status": "found"
+    },
+    "named_project_lead": {
+      "value": null,
+      "status": "not_stated",
+      "note": "a coordinator is to be assigned at kickoff"
+    },
+    "crew_stated": {
+      "value": null,
+      "status": "not_stated"
+    },
+    "safety_plan": {
+      "value": null,
+      "status": "not_stated"
+    },
+    "performance_monitoring_plan": {
+      "value": null,
+      "status": "not_stated"
+    }
+  },
+  "integrity_flags": [],
+  "_meta": {
+    "origin": "hand-prepared fixture: extracted facts only, no proposal text or quotes"
+  }
+}

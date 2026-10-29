@@ -1,0 +1,4 @@
+.env
+__pycache__/
+prototype/samples_local/
+prototype/extractions_local/

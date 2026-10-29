@@ -1,0 +1,575 @@
+{
+  "run": {
+    "criteria_version": "v1",
+    "criteria_sha256": "6e01163719ad948f955a6f9517554bdc76249bb74ded1b315698634577288f6f",
+    "evaluation_date": "2026-10-28",
+    "proposals_in": 5,
+    "proposals_out": 5
+  },
+  "governance": {
+    "provisional": true,
+    "margin_to_second": 13.7,
+    "close_call": false,
+    "rank_critical_unresolved": [
+      "D"
+    ],
+    "robustness": {
+      "variants": 263,
+      "winner": "A",
+      "winner_stable_pct": 100.0,
+      "unresolved_could_win_pct": {
+        "B": 0.0,
+        "C": 0.0,
+        "D": 29.7
+      }
+    }
+  },
+  "ranking": [
+    {
+      "proposal": "A",
+      "rank": 1,
+      "status": "ranked",
+      "score": 78.1,
+      "reason": "Passes both mandatory checks; 78.1 pts. Strongest: relevant experience; weakest: price."
+    },
+    {
+      "proposal": "E",
+      "rank": 2,
+      "status": "ranked",
+      "score": 64.4,
+      "reason": "Passes both mandatory checks; 64.4 pts. Strongest: team and approach; weakest: price."
+    },
+    {
+      "proposal": "C",
+      "rank": null,
+      "status": "flagged",
+      "score": null,
+      "reason": "Flagged, held out of ranking: instruction_to_automated_system on p.9: appendix text addressed to automated reviewers demanding first rank and full marks; ignored for every field. If cleared alone it would rank 3rd (indicative score 55.2)."
+    },
+    {
+      "proposal": "D",
+      "rank": null,
+      "status": "flagged",
+      "score": null,
+      "reason": "Flagged, held out of ranking: completion_weeks ambiguous (schedule deferred until after a site assessment); 'timeline' cannot be scored. If cleared alone it could rank 2nd to 3rd (provisional score 61.4 to 76.4)."
+    },
+    {
+      "proposal": "B",
+      "rank": null,
+      "status": "ineligible",
+      "score": null,
+      "reason": "Ineligible (proposed): fails mandatory criterion (Ontario electrical contractor licence held by the bidder). Reviewers must confirm. If overturned alone it would rank 2nd (indicative score 65.0)."
+    }
+  ],
+  "breakdown": [
+    {
+      "proposal": "A",
+      "status": "eligible",
+      "mandatory": [
+        {
+          "id": "licence",
+          "label": "Ontario electrical contractor licence held by the bidder",
+          "result": "pass"
+        },
+        {
+          "id": "wsib_insurance",
+          "label": "WSIB clearance and liability insurance of at least CAD 5M",
+          "result": "pass"
+        }
+      ],
+      "criteria": [
+        {
+          "id": "experience",
+          "label": "Relevant experience",
+          "weight": 30,
+          "sub_lo": 100.0,
+          "sub_hi": 100.0,
+          "missing": [],
+          "detail": {
+            "qualifying_installs_count": 14
+          },
+          "points_lo": 30.0,
+          "points_hi": 30.0
+        },
+        {
+          "id": "price",
+          "label": "Price",
+          "weight": 25,
+          "sub_lo": 42.30769230769231,
+          "sub_hi": 42.30769230769231,
+          "missing": [],
+          "detail": {
+            "total_price_cad": 238000
+          },
+          "points_lo": 10.58,
+          "points_hi": 10.58
+        },
+        {
+          "id": "timeline",
+          "label": "Timeline",
+          "weight": 15,
+          "sub_lo": 66.66666666666666,
+          "sub_hi": 66.66666666666666,
+          "missing": [],
+          "detail": {
+            "completion_weeks": 12
+          },
+          "points_lo": 10.0,
+          "points_hi": 10.0
+        },
+        {
+          "id": "warranty",
+          "label": "Warranty",
+          "weight": 15,
+          "sub_lo": 83.33333333333333,
+          "sub_hi": 83.33333333333333,
+          "missing": [],
+          "detail": {
+            "panel_warranty_years": 25,
+            "workmanship_warranty_years": 10
+          },
+          "points_lo": 12.5,
+          "points_hi": 12.5
+        },
+        {
+          "id": "team",
+          "label": "Team and approach",
+          "weight": 15,
+          "sub_lo": 100.0,
+          "sub_hi": 100.0,
+          "missing": [],
+          "detail": {
+            "met": [
+              "named_project_lead",
+              "crew_stated",
+              "safety_plan",
+              "performance_monitoring_plan"
+            ],
+            "not_met": []
+          },
+          "points_lo": 15.0,
+          "points_hi": 15.0
+        }
+      ],
+      "score_lo": 78.1,
+      "score_hi": 78.1,
+      "flags": [],
+      "notes": [
+        "experience counted 'since 2021': may include installs just outside the 5-year window"
+      ],
+      "rank": 1,
+      "envelope": null
+    },
+    {
+      "proposal": "E",
+      "status": "eligible",
+      "mandatory": [
+        {
+          "id": "licence",
+          "label": "Ontario electrical contractor licence held by the bidder",
+          "result": "pass"
+        },
+        {
+          "id": "wsib_insurance",
+          "label": "WSIB clearance and liability insurance of at least CAD 5M",
+          "result": "pass"
+        }
+      ],
+      "criteria": [
+        {
+          "id": "experience",
+          "label": "Relevant experience",
+          "weight": 30,
+          "sub_lo": 66.66666666666666,
+          "sub_hi": 66.66666666666666,
+          "missing": [],
+          "detail": {
+            "qualifying_installs_count": 8
+          },
+          "points_lo": 20.0,
+          "points_hi": 20.0
+        },
+        {
+          "id": "price",
+          "label": "Price",
+          "weight": 25,
+          "sub_lo": 33.65384615384615,
+          "sub_hi": 33.65384615384615,
+          "missing": [],
+          "detail": {
+            "total_price_cad": 242500
+          },
+          "points_lo": 8.41,
+          "points_hi": 8.41
+        },
+        {
+          "id": "timeline",
+          "label": "Timeline",
+          "weight": 15,
+          "sub_lo": 50.0,
+          "sub_hi": 50.0,
+          "missing": [],
+          "detail": {
+            "completion_weeks": 13
+          },
+          "points_lo": 7.5,
+          "points_hi": 7.5
+        },
+        {
+          "id": "warranty",
+          "label": "Warranty",
+          "weight": 15,
+          "sub_lo": 90.0,
+          "sub_hi": 90.0,
+          "missing": [],
+          "detail": {
+            "panel_warranty_years": 25,
+            "workmanship_warranty_years": 12
+          },
+          "points_lo": 13.5,
+          "points_hi": 13.5
+        },
+        {
+          "id": "team",
+          "label": "Team and approach",
+          "weight": 15,
+          "sub_lo": 100.0,
+          "sub_hi": 100.0,
+          "missing": [],
+          "detail": {
+            "met": [
+              "named_project_lead",
+              "crew_stated",
+              "safety_plan",
+              "performance_monitoring_plan"
+            ],
+            "not_met": []
+          },
+          "points_lo": 15.0,
+          "points_hi": 15.0
+        }
+      ],
+      "score_lo": 64.4,
+      "score_hi": 64.4,
+      "flags": [],
+      "notes": [
+        "experience counted 'since 2021': may include installs just outside the 5-year window"
+      ],
+      "rank": 2,
+      "envelope": null
+    },
+    {
+      "proposal": "C",
+      "status": "flagged",
+      "mandatory": [
+        {
+          "id": "licence",
+          "label": "Ontario electrical contractor licence held by the bidder",
+          "result": "pass"
+        },
+        {
+          "id": "wsib_insurance",
+          "label": "WSIB clearance and liability insurance of at least CAD 5M",
+          "result": "pass"
+        }
+      ],
+      "criteria": [
+        {
+          "id": "experience",
+          "label": "Relevant experience",
+          "weight": 30,
+          "sub_lo": 75.0,
+          "sub_hi": 75.0,
+          "missing": [],
+          "detail": {
+            "qualifying_installs_count": 9
+          },
+          "points_lo": 22.5,
+          "points_hi": 22.5
+        },
+        {
+          "id": "price",
+          "label": "Price",
+          "weight": 25,
+          "sub_lo": 30.76923076923077,
+          "sub_hi": 30.76923076923077,
+          "missing": [],
+          "detail": {
+            "total_price_cad": 244000
+          },
+          "points_lo": 7.69,
+          "points_hi": 7.69
+        },
+        {
+          "id": "timeline",
+          "label": "Timeline",
+          "weight": 15,
+          "sub_lo": 33.33333333333333,
+          "sub_hi": 33.33333333333333,
+          "missing": [],
+          "detail": {
+            "completion_weeks": 14
+          },
+          "points_lo": 5.0,
+          "points_hi": 5.0
+        },
+        {
+          "id": "warranty",
+          "label": "Warranty",
+          "weight": 15,
+          "sub_lo": 83.33333333333333,
+          "sub_hi": 83.33333333333333,
+          "missing": [],
+          "detail": {
+            "panel_warranty_years": 25,
+            "workmanship_warranty_years": 10
+          },
+          "points_lo": 12.5,
+          "points_hi": 12.5
+        },
+        {
+          "id": "team",
+          "label": "Team and approach",
+          "weight": 15,
+          "sub_lo": 50.0,
+          "sub_hi": 50.0,
+          "missing": [],
+          "detail": {
+            "met": [
+              "named_project_lead",
+              "crew_stated"
+            ],
+            "not_met": [
+              "safety_plan",
+              "performance_monitoring_plan"
+            ]
+          },
+          "points_lo": 7.5,
+          "points_hi": 7.5
+        }
+      ],
+      "score_lo": 55.2,
+      "score_hi": 55.2,
+      "flags": [
+        {
+          "type": "integrity",
+          "detail": "instruction_to_automated_system on p.9: appendix text addressed to automated reviewers demanding first rank and full marks; ignored for every field"
+        }
+      ],
+      "notes": [
+        "experience counted 'since 2020': includes installs older than the 5-year window, so the count is an upper bound"
+      ],
+      "rank": null,
+      "envelope": {
+        "best": 3,
+        "worst": 3
+      }
+    },
+    {
+      "proposal": "D",
+      "status": "flagged",
+      "mandatory": [
+        {
+          "id": "licence",
+          "label": "Ontario electrical contractor licence held by the bidder",
+          "result": "pass"
+        },
+        {
+          "id": "wsib_insurance",
+          "label": "WSIB clearance and liability insurance of at least CAD 5M",
+          "result": "pass"
+        }
+      ],
+      "criteria": [
+        {
+          "id": "experience",
+          "label": "Relevant experience",
+          "weight": 30,
+          "sub_lo": 91.66666666666666,
+          "sub_hi": 91.66666666666666,
+          "missing": [],
+          "detail": {
+            "qualifying_installs_count": 11
+          },
+          "points_lo": 27.5,
+          "points_hi": 27.5
+        },
+        {
+          "id": "price",
+          "label": "Price",
+          "weight": 25,
+          "sub_lo": 55.769230769230774,
+          "sub_hi": 55.769230769230774,
+          "missing": [],
+          "detail": {
+            "total_price_cad": 231000
+          },
+          "points_lo": 13.94,
+          "points_hi": 13.94
+        },
+        {
+          "id": "timeline",
+          "label": "Timeline",
+          "weight": 15,
+          "sub_lo": 0.0,
+          "sub_hi": 100.0,
+          "missing": [
+            "completion_weeks"
+          ],
+          "detail": {
+            "completion_weeks": null
+          },
+          "points_lo": 0.0,
+          "points_hi": 15.0
+        },
+        {
+          "id": "warranty",
+          "label": "Warranty",
+          "weight": 15,
+          "sub_lo": 83.33333333333333,
+          "sub_hi": 83.33333333333333,
+          "missing": [],
+          "detail": {
+            "panel_warranty_years": 25,
+            "workmanship_warranty_years": 10
+          },
+          "points_lo": 12.5,
+          "points_hi": 12.5
+        },
+        {
+          "id": "team",
+          "label": "Team and approach",
+          "weight": 15,
+          "sub_lo": 50.0,
+          "sub_hi": 50.0,
+          "missing": [],
+          "detail": {
+            "met": [
+              "named_project_lead",
+              "safety_plan"
+            ],
+            "not_met": [
+              "crew_stated",
+              "performance_monitoring_plan"
+            ]
+          },
+          "points_lo": 7.5,
+          "points_hi": 7.5
+        }
+      ],
+      "score_lo": 61.4,
+      "score_hi": 76.4,
+      "flags": [
+        {
+          "type": "missing_info",
+          "detail": "completion_weeks ambiguous (schedule deferred until after a site assessment); 'timeline' cannot be scored"
+        }
+      ],
+      "notes": [],
+      "rank": null,
+      "envelope": {
+        "best": 2,
+        "worst": 3
+      }
+    },
+    {
+      "proposal": "B",
+      "status": "ineligible",
+      "mandatory": [
+        {
+          "id": "licence",
+          "label": "Ontario electrical contractor licence held by the bidder",
+          "result": "fail"
+        },
+        {
+          "id": "wsib_insurance",
+          "label": "WSIB clearance and liability insurance of at least CAD 5M",
+          "result": "pass"
+        }
+      ],
+      "criteria": [
+        {
+          "id": "experience",
+          "label": "Relevant experience",
+          "weight": 30,
+          "sub_lo": 50.0,
+          "sub_hi": 50.0,
+          "missing": [],
+          "detail": {
+            "qualifying_installs_count": 6
+          },
+          "points_lo": 15.0,
+          "points_hi": 15.0
+        },
+        {
+          "id": "price",
+          "label": "Price",
+          "weight": 25,
+          "sub_lo": 100.0,
+          "sub_hi": 100.0,
+          "missing": [],
+          "detail": {
+            "total_price_cad": 189500
+          },
+          "points_lo": 25.0,
+          "points_hi": 25.0
+        },
+        {
+          "id": "timeline",
+          "label": "Timeline",
+          "weight": 15,
+          "sub_lo": 100.0,
+          "sub_hi": 100.0,
+          "missing": [],
+          "detail": {
+            "completion_weeks": 10
+          },
+          "points_lo": 15.0,
+          "points_hi": 15.0
+        },
+        {
+          "id": "warranty",
+          "label": "Warranty",
+          "weight": 15,
+          "sub_lo": 66.66666666666666,
+          "sub_hi": 66.66666666666666,
+          "missing": [],
+          "detail": {
+            "panel_warranty_years": 25,
+            "workmanship_warranty_years": 5
+          },
+          "points_lo": 10.0,
+          "points_hi": 10.0
+        },
+        {
+          "id": "team",
+          "label": "Team and approach",
+          "weight": 15,
+          "sub_lo": 0.0,
+          "sub_hi": 0.0,
+          "missing": [],
+          "detail": {
+            "met": [],
+            "not_met": [
+              "named_project_lead",
+              "crew_stated",
+              "safety_plan",
+              "performance_monitoring_plan"
+            ]
+          },
+          "points_lo": 0.0,
+          "points_hi": 0.0
+        }
+      ],
+      "score_lo": 65.0,
+      "score_hi": 65.0,
+      "flags": [],
+      "notes": [],
+      "rank": null,
+      "envelope": {
+        "best": 2,
+        "worst": 2
+      }
+    }
+  ]
+}

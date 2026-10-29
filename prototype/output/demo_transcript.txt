@@ -1,0 +1,37 @@
+
+--- 1. After automated processing
+  A: RANKED               rank 1, 78.1
+  B: PROPOSED_INELIGIBLE    (would rank 2nd if resolved alone)
+  C: NEEDS_REVIEW           (would rank 3rd if resolved alone)
+  D: NEEDS_REVIEW           (could rank 2nd to 3rd if resolved alone)
+  E: RANKED               rank 2, 64.4
+  ranking PROVISIONAL; unresolved bids that could decide the winner: ['D']; margin to second: 13.7
+  REFUSED  approver ap1 tries to record the award now
+           -> unresolved bids: ['B', 'C', 'D']; evidence not opened by any reviewer for: ['A', 'E']
+
+--- 2. Reviewers work the queue
+  REFUSED  r1 confirms B's exclusion alone
+           -> a second, different person must confirm this action
+  OK       r1 + r2 confirm B's exclusion
+  OK       r1 + r2 set C aside (procurement-integrity decision)
+  REFUSED  clarification tries to change D's price
+           -> 'total_price_cad' cannot be changed by clarification (would be bid repair)
+  OK       clarification supplies D's missing schedule (15 weeks)
+
+--- 3. After reviewer decisions (re-scored with no AI call)
+  A: RANKED               rank 1, 78.1
+  B: EXCLUDED             
+  C: SET_ASIDE            
+  D: RANKED               rank 3, 63.9
+  E: RANKED               rank 2, 64.4
+  ranking COMPLETE; unresolved bids that could decide the winner: none; margin to second: 13.7
+
+--- 4. Approval
+  REFUSED  r1 (a decision-maker) tries to approve
+           -> evidence not opened by any reviewer for: ['A', 'E']; approver 'r1' took part in the decisions (maker-checker)
+  REFUSED  ap1 approves before evidence for A and E was opened
+           -> evidence not opened by any reviewer for: ['A', 'E']
+  OK       ap1 records the award to A
+
+audit log: 15 entries, chain verifies: True
+after editing entry 7 by hand: chain verifies: False (first bad entry: 7)

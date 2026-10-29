@@ -1,0 +1,84 @@
+{
+  "category": "Commercial Solar Installation",
+  "criteria_version": "v1",
+  "evaluation_date": "2026-10-28",
+  "governance": {
+    "readers_required": 2,
+    "close_call_margin": 3.0,
+    "top_n_evidence": 2,
+    "clarification_locked_fields": ["total_price_cad"]
+  },
+  "robustness": {"anchor_scales": [0.8, 1.0, 1.25], "weight_shift": 5},
+  "limits": [
+    {"field": "total_price_cad",  "max": 260000, "label": "budget ceiling (CAD 260,000)"},
+    {"field": "completion_weeks", "max": 16,     "label": "16-week completion limit"}
+  ],
+  "mandatory": [
+    {
+      "id": "licence",
+      "label": "Ontario electrical contractor licence held by the bidder",
+      "rules": [
+        {"field": "licence_held_by_bidder", "op": "is_true"}
+      ]
+    },
+    {
+      "id": "wsib_insurance",
+      "label": "WSIB clearance and liability insurance of at least CAD 5M",
+      "rules": [
+        {"field": "wsib_clearance_confirmed", "op": "is_true"},
+        {"field": "liability_insurance_cad",  "op": "gte", "value": 5000000}
+      ]
+    }
+  ],
+  "weighted": [
+    {"id": "experience", "label": "Relevant experience", "weight": 30, "type": "linear",
+     "field": "qualifying_installs_count", "zero_at": 0, "full_at": 12},
+    {"id": "price", "label": "Price", "weight": 25, "type": "linear",
+     "field": "total_price_cad", "zero_at": 260000, "full_at": 208000},
+    {"id": "timeline", "label": "Timeline", "weight": 15, "type": "linear",
+     "field": "completion_weeks", "zero_at": 16, "full_at": 10,
+     "on_missing": "flag"},
+    {"id": "warranty", "label": "Warranty", "weight": 15, "type": "composite",
+     "parts": [
+       {"field": "panel_warranty_years",       "zero_at": 10, "full_at": 25, "share": 0.5},
+       {"field": "workmanship_warranty_years", "zero_at": 0,  "full_at": 15, "share": 0.5}
+     ]},
+    {"id": "team", "label": "Team and approach", "weight": 15, "type": "checklist",
+     "items": ["named_project_lead", "crew_stated", "safety_plan", "performance_monitoring_plan"]}
+  ],
+  "tie_breakers": [
+    {"by": "subscore", "id": "experience",       "prefer": "higher"},
+    {"by": "field",    "id": "total_price_cad",  "prefer": "lower"},
+    {"by": "field",    "id": "completion_weeks", "prefer": "lower"}
+  ],
+  "fields": [
+    {"id": "licence_held_by_bidder", "type": "boolean",
+     "definition": "Whether the BIDDER ITSELF (the company submitting this proposal) holds an Ontario electrical contractor licence or registration. true = the proposal says the bidder holds it (a licence number is typical but not required). false = the proposal says or clearly implies the bidder does not hold it, for example the electrical work is to be done by a subcontractor, partner or other third party, even if that party is licensed or is still to be named. Vague wording is not false: use ambiguous. No mention at all: not_stated."},
+    {"id": "wsib_clearance_confirmed", "type": "boolean",
+     "definition": "true only if the proposal states that the bidder currently holds WSIB clearance. If it only says clearance will be obtained, or does not say it is current, use ambiguous. No mention: not_stated."},
+    {"id": "liability_insurance_cad", "type": "number",
+     "definition": "The amount of commercial or general liability insurance the bidder states it carries, as a plain number in CAD (for example 5000000). If several limits are given, report the lowest. Report only the amount; do not judge whether it is sufficient."},
+    {"id": "qualifying_installs_count", "type": "integer",
+     "definition": "How many completed commercial installations of 100 kW or more the proposal states the bidder has delivered. Use the stated total when the proposal says the installations are 100 kW or more (or gives a size range whose lower bound is at least 100 kW). If sizes are given per project, count only those of 100 kW or more. Exclude installations under 100 kW, residential, planned or in progress. If the count mixes sizes without saying how many are 100 kW or more: ambiguous."},
+    {"id": "installs_period_start_year", "type": "integer",
+     "definition": "If the installations are described with calendar years (for example 'since 2021' or 'between 2020 and 2024'), the earliest year of that period. Otherwise null."},
+    {"id": "installs_period_years_back", "type": "number",
+     "definition": "If the installations are described relative to today (for example 'in the last five years' or 'over the past four years'), the number of years. Otherwise null."},
+    {"id": "total_price_cad", "type": "number",
+     "definition": "The total price for the complete scope of work, as a plain number in CAD. Accept a single all-in total. If only partial prices, options or exclusions are given and no total is stated, use ambiguous. Use note to say what the price includes."},
+    {"id": "completion_weeks", "type": "number",
+     "definition": "Duration from contract award to completion, in weeks. If stated in days or months convert (7 days = 1 week; 1 month = 4.3 weeks). A deferred or conditional schedule (for example 'to be determined after assessment') is ambiguous, not a number."},
+    {"id": "panel_warranty_years", "type": "number",
+     "definition": "Length in years of the warranty on the solar panels. If several panel warranties are stated (product and performance), report the longest and say so in note."},
+    {"id": "workmanship_warranty_years", "type": "number",
+     "definition": "Length in years of the bidder's installation or workmanship warranty."},
+    {"id": "named_project_lead", "type": "boolean",
+     "definition": "true only if the proposal says a specific, already-identified person leads this project (it gives a name or says the lead is named). A lead who will be assigned later, or a generic role, is not enough: report status not_stated, value false, and say what was found in note."},
+    {"id": "crew_stated", "type": "boolean",
+     "definition": "true only if the proposal describes the installation crew: a headcount, named members or composition. Otherwise status not_stated, value false."},
+    {"id": "safety_plan", "type": "boolean",
+     "definition": "true only if the proposal states that a site safety plan or safety programme is included or will be provided. Otherwise status not_stated, value false."},
+    {"id": "performance_monitoring_plan", "type": "boolean",
+     "definition": "true only if the proposal includes monitoring of the installed system's performance (for example remote monitoring or a monitoring period). Project progress reports, structural reviews and site assessments are NOT performance monitoring. Otherwise status not_stated, value false, and say in note if something similar was found."}
+  ]
+}

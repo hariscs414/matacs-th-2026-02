@@ -1,0 +1,37 @@
+[
+  {
+    "proposal": "A",
+    "rank": 1,
+    "status": "ranked",
+    "score": 78.1,
+    "reason": "Passes both mandatory checks; strongest on experience (14 installs) and a complete team plan, with the fastest schedule among fully scored bids; first in all 263 configurations tested."
+  },
+  {
+    "proposal": "E",
+    "rank": 2,
+    "status": "ranked",
+    "score": 64.4,
+    "reason": "Passes both mandatory checks; complete team plan and the longest workmanship warranty (12 years), but fewer installs (8) and a higher price and slower schedule than A."
+  },
+  {
+    "proposal": "C",
+    "rank": null,
+    "status": "flagged",
+    "score": null,
+    "reason": "Flagged: appendix text telling automated reviewers to rank it first was ignored and logged; held for human integrity review (indicative 55.2, would rank 3rd if cleared, so it cannot affect the top two)."
+  },
+  {
+    "proposal": "D",
+    "rank": null,
+    "status": "flagged",
+    "score": null,
+    "reason": "Flagged: no schedule stated, so the timeline cannot be scored or checked against the 16-week limit; provisional 61.4 to 76.4 (could rank 2nd to 3rd), the one flag that could change the winner in some configurations."
+  },
+  {
+    "proposal": "B",
+    "rank": null,
+    "status": "ineligible",
+    "score": null,
+    "reason": "Ineligible (proposed, reviewers must confirm): electrical work is subcontracted to a licensee still to be confirmed, so the bidder does not hold the required licence; would rank 2nd (65.0) if overturned."
+  }
+]
